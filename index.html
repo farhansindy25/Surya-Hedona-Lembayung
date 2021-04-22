@@ -1,4 +1,4 @@
-p<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
 
@@ -142,6 +142,7 @@ p<!DOCTYPE html>
    .navbar li a, .navbar .navbar-brand {
      color: #046582 !important;
      height : 75px;
+     background-color: #f6f6f6;
    }
    .navbar-nav li a:hover, .navbar-nav li.active a {
      color: #046582 !important;
@@ -153,6 +154,7 @@ p<!DOCTYPE html>
      border-color: transparent;
      color: #fff !important;
      height : 75px;
+
    }
    footer .glyphicon {
      font-size: 25px;
@@ -202,7 +204,6 @@ p<!DOCTYPE html>
     .thumbnail{
       font-size:22px;
     }
-
 
 
    </style>
@@ -256,8 +257,8 @@ p<!DOCTYPE html>
      <!-- Wrapper for slides -->
      <div class="carousel-inner" style="background:black;">
 
-       <div class="item" >
-         <img src="img/t2.jpg" alt="slide1" style="width:100%; height:600px;opacity: 0.6;">
+       <div class="item">
+         <img src="img/t2.jpg" class="img-fluid" alt="slide1" style="width:100%; height:650px ; opacity: 0.6;">
          <div class="carousel-caption">
            <h3>Best Quality Product</h3>
            <p>Every product covered by original warranty</p>
@@ -265,7 +266,7 @@ p<!DOCTYPE html>
        </div>
 
        <div class="item active" >
-         <img src="img/img2.jpg" alt="slide2" style="width:100%; height:600px;opacity: 0.6;">
+         <img src="img/img2.jpg" class="img-fluid" alt="slide2" style="width:100%; height:650px; opacity: 0.6;">
          <div class="carousel-caption">
            <h3>IT Hardware & Networking Solution</h3>
            <p>We provide the best IT solution for your business!</p>
@@ -273,7 +274,7 @@ p<!DOCTYPE html>
        </div>
 
        <div class="item">
-         <img src="img/t3.jpg" alt="slide3" style="width:100%; height:600px;opacity: 0.3;">
+         <img src="img/t3.jpg" class="img-fluid" alt="slide3" style="width:100%; height:650px; opacity: 0.3;">
          <div class="carousel-caption">
            <h3>We support IoT</h3>
            <p>Data is the new gold</p>
@@ -294,13 +295,7 @@ p<!DOCTYPE html>
    </div>
  </div>
 
-
-
-
-
-
-
-
+<br><br><br>
 
 
 
@@ -316,7 +311,7 @@ p<!DOCTYPE html>
        <br><button class="btn btn-default btn-lg" onclick="window.location.href='#contact'">Get in Touch</button>
      </div>
      <div class="col-sm-4">
-      <center> <span ><<img src="img/clogo.png" alt="Company Logo"><br><h3>PT. Surya Hedona Lembayung</h3></span></center>
+      <center> <span ><<img src="img/clogo.png" class="img-fluid" alt="Company Logo" width="80%"><br><h3>PT. Surya Hedona Lembayung</h3></span></center>
      </div>
    </div>
  </div>
@@ -324,7 +319,7 @@ p<!DOCTYPE html>
  <div class="container-fluid bg-grey">
    <div class="row">
      <div class="col-sm-4">
-       <span ><img src="img/img3.jpg" alt="company image" width="450 px"></span>
+       <span ><img src="img/img3.jpg" class="img-fluid" alt="company image" width="100%"></span>
      </div>
      <div class="col-sm-8">
        <h2>Our Values</h2><br>
@@ -433,7 +428,7 @@ p<!DOCTYPE html>
              <h1>Network Access Controller</h1>
            </div>
            <div class="panel-body">
-             <img src="img/nac2.jpg" alt="NAC" width="325 px" height="275 px">
+             <img src="img/nac2.jpg" class="img-fluid" alt="NAC" width="80%" height="275 px">
            </div>
            <div class="panel-footer">
              <h4><i>Started From</i></h4>
@@ -448,7 +443,7 @@ p<!DOCTYPE html>
              <h1>Access Point</h1>
            </div>
            <div class="panel-body">
-             <img src="img/altai.png" alt="Access Point" width="325 px" height="275 px">
+             <img src="img/altai.png" class="img-fluid" alt="Access Point" width="80%" height="275 px">
 
            </div>
            <div class="panel-footer">
@@ -464,7 +459,7 @@ p<!DOCTYPE html>
              <h1>Switches</h1>
            </div>
            <div class="panel-body">
-             <img src="img/sw.jpg" alt="Switches" width="325 px" height="275 px">
+             <img src="img/sw.jpg" class="img-fluid" alt="Switches" width="80%" height="275 px">
            </div>
            <div class="panel-footer">
              <h4><i>Started From</i></h4>
@@ -489,7 +484,7 @@ p<!DOCTYPE html>
 
        <div class="item active">
          <h2>Payment Proccess</h2><br><br>
-         <center><img src="img/paymentp.PNG" alt="payment" width="80%"></center><br><br><br>
+         <center><img src="img/paymentp.png" alt="payment" width="80%"></center><br><br><br>
        </div>
 
     </div>
@@ -533,8 +528,8 @@ p<!DOCTYPE html>
    </div>
  </div>
 
- <!-- Image of location/map -->
- <img src="img/t2.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+ <!-- Image end/map -->
+ <center><img src="img/t2.jpg" class="w3-image w3-greyscale-min" style="width:90%"></center>
 
  <footer class="container-fluid text-center">
    <a href="#myPage" title="To Top">
@@ -578,6 +573,20 @@ p<!DOCTYPE html>
      });
    });
  })
+
+
+ $('.carousel-inner').slick({
+    autoplay: false,
+    dots: false,
+    infinite: false,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  rows: 0
+})
+.on('setPosition', function (event, slick) {
+    slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+});
  </script>
 
  </body>
